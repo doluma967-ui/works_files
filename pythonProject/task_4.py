@@ -13,21 +13,16 @@ def caesar(text, shift):
             result += char
     return result
 
-# Читаем secret.txt
 with open('secret.txt', 'r', encoding='utf-8') as f:
     original = f.read()
 
-# Шифруем
 encrypted = caesar(original, SHIFT)
 
-# Записываем encrypted.txt
 with open('encrypted.txt', 'w', encoding='utf-8') as f:
     f.write(encrypted)
 
-# Расшифровываем (сдвиг -3)
 decrypted = caesar(encrypted, -SHIFT)
 
-# Записываем decrypted.txt
 with open('decrypted.txt', 'w', encoding='utf-8') as f:
     f.write(decrypted)
 
