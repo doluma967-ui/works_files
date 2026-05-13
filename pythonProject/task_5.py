@@ -1,12 +1,10 @@
 with open('words.txt', 'r', encoding='utf-8') as f:
     words = [line.strip() for line in f if line.strip()]
 
-# Сортируем
-alphabetical = sorted(words)                    # по алфавиту (A-Z)
-by_length = sorted(words, key=len)              # по длине (от коротких к длинным)
-reverse_alpha = sorted(words, reverse=True)     # обратный алфавит (Z-A)
+alphabetical = sorted(words)                   
+by_length = sorted(words, key=len)            
+reverse_alpha = sorted(words, reverse=True)    
 
-# Записываем в разные файлы
 with open('sorted_alphabetically.txt', 'w', encoding='utf-8') as f:
     f.write('\n'.join(alphabetical))
 
